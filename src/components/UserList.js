@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import User from './User'
+import User from './User'
 
 const UserList = () => {
 
@@ -8,15 +8,19 @@ const [users, setUsers] = useState([])
 useEffect(() => {
   fetch('https://randomuser.me/api?results=25')
   .then((res) => res.json())
-  .then((users) => setUsers(users))
+  .then((users) => setUsers(users.results))
 }, [])
+
+// const sortedUsers = this.users.sort((a, b) => a.name.first.localeCompare(b.name.first))
 
 
   return (
-    <ol>
-      {users.results?.map((user) => {
+    <ol className="userList">
+      {users.map((user) => {
         return (
-          <li>{user.name.first}</li>
+          <li key={user.id.value}>
+            <User {...user} />
+          </li>
         )})}
     </ol>
   )
