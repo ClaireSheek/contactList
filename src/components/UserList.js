@@ -16,7 +16,13 @@ useEffect(() => {
 
   return (
     <ol className="userList">
-      {users.map((user) => {
+      {users
+      .sort((a, b) => {
+        return(
+          a.name.first > b.name.first
+        )
+      })
+      .map((user) => {
         return (
           <li key={user.id.value}>
             <User {...user} />
