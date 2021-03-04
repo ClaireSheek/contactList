@@ -1,9 +1,21 @@
 .App {
-  text-align: center;
+  background-color: rgb(80, 137, 155);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(49, 49, 49);
 }
 
 .userList {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(204, 204, 204);
+  box-shadow: 5px 5px 5px rgb(53, 53, 53);
   list-style: none;
+  width: 500px;
 
   li {
     display: flex;
@@ -14,12 +26,15 @@
 
 .userCard {
   display: flex;
-  // justify-content: space-between;
-  width: 500px;
-  margin: 20px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: 5px 5px 5px rgb(53, 53, 53);
+  width: 450px;
+  margin: 5px;
+  padding:20px;
 
   img {
-    margin-right: 5vw;
+    margin-right: 4vw;
+    box-shadow: 2px 2px 5px rgb(53, 53, 53);
   }
 
   h3{
@@ -33,6 +48,6 @@
 
   p{
     text-align: left;
-    margin: 10px;
+    // margin: 10px;
   }
 }

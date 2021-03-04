@@ -10,7 +10,7 @@ const User = props => {
   }, [props]);
 
   return (
-    <div className="userCard">
+    <div className="userCard" onClick={() => {isHidden ? setHide(false) : setHide(true)}}>
       <div>
         <img 
           src={user.picture.large}
